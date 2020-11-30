@@ -112,6 +112,9 @@ int main() {
 	}
 	// On initialise MyTab2 avec 20 zéros et on l'affiche
 	initTab(MyTab2, nbElts);
+	for (int i = 0; i < 20; i++) {
+		*(MyTab2 + i) = i + 1;
+	}
 	printf(" \n Tab2 est :");
 	afficheTab(MyTab2, 20, nbElts);
 

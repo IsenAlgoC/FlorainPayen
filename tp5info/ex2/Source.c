@@ -28,7 +28,8 @@ TABLEAU NewArray() {
 //2
 int incrementArraySize(TABLEAU* tab, int incrementValue) {
 	int* tpp = tab->elt;                                                                // sauvegarde du pointeur actuel
-	tab->elt  = (int*)realloc(tab->elt, (tab->size + incrementValue) * sizeof(int));   //on réalloue de la mémoire 
+	int somme = (tab->size + incrementValue);
+	tab->elt  = (int*)realloc(tab->elt, somme * sizeof(int));   //on réalloue de la mémoire 
 	if (tab->elt == NULL) {                                                             // si cela echoue on renvoit -1                         
 		tab->elt = tpp;                                                                 // restitution du pointeur précédent
 		return -1;
@@ -116,7 +117,8 @@ int deleteElements(TABLEAU* tab, int startPos, int endPos) {
 				*(tab->elt + startPos - 1 + i) = *(tab->elt + startPos - 1 + nbElemSupp + i); // on decale les valeurs de nbElementsSuppr vers la gauche
 		}
 		int* tmp2 = tab->elt;                                                                   // sauvegarde du pointeur actuel
-		tab->elt = (int*)realloc(tab->elt, ((tab->size -nbElemSupp) * sizeof(int)));            //on realloue la memoire
+		int some = (tab->size - nbElemSupp);
+		tab->elt = (int*)realloc(tab->elt, (some * sizeof(int)));            //on realloue la memoire
 		if (tab->elt == NULL) {                    // échec de la réallocatio
 			
 			tab->elt = tmp2;                      // restitution du pointeur précédent

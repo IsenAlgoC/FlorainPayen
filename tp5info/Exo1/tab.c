@@ -64,7 +64,8 @@ int* ajouteElementDansTableau(int* tab, int* size, int* nbElts, int element) {
 			printf(" \n Plus de place");
 			int ajout = TAILLEAJOUT;
 			int* tmp = tab;                    //on sauvegarde le pointeur en cas d'échec de la réalloc
-			tab = (int*)realloc(tab, (*size + ajout) * (sizeof(int)));
+			int somme = (*size + ajout);
+			tab = (int*)realloc(tab,  somme* (sizeof(int)));
 			if (tab != NULL) {                 // On vérifie que la realloc a marché, si oui on peut déplacer tab à l'adresse prévue et modifier les différents compteurs
 											  // Cela  permet de ne pas modifier la valeur de tab si la realoc n'a pas fonctionné
 				*size = *size + TAILLEAJOUT;

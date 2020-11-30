@@ -15,12 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Exercice1\tab.h">
+    <ClInclude Include="tab.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Exercice1\tab.c">
+    <ClCompile Include="tab.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

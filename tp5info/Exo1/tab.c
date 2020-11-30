@@ -19,13 +19,13 @@ int initTab(int* tab, int size) {           //création premiere fonction qui rem
 
 			*(tab + i) = 0;                // on affecte 0 à la variable pointée par chaque adresse du tableau
 		}
-		return size;   
+		return size;
 	}
 }
 
 int afficheTab(int* tab, int size, int nbElts) {     //meme principe mais avec le nombre d'elements en plus
 	int i;
-	if ((tab == NULL) || (size < 0) || (size <nbElts)) {   
+	if ((tab == NULL) || (size < 0) || (size < nbElts)) {
 
 		return -1;
 	}
@@ -66,7 +66,7 @@ int* ajouteElementDansTableau(int* tab, int* size, int* nbElts, int element) {
 			int* tmp = tab;                    //on sauvegarde le pointeur en cas d'échec de la réalloc
 			tab = (int*)realloc(tab, (*size + ajout) * (sizeof(int)));
 			if (tab != NULL) {                 // On vérifie que la realloc a marché, si oui on peut déplacer tab à l'adresse prévue et modifier les différents compteurs
-								              // Cela  permet de ne pas modifier la valeur de tab si la realoc n'a pas fonctionné
+											  // Cela  permet de ne pas modifier la valeur de tab si la realoc n'a pas fonctionné
 				*size = *size + TAILLEAJOUT;
 				*(tab + *nbElts) = element;
 				*nbElts = *nbElts + 1;
@@ -83,7 +83,7 @@ int* ajouteElementDansTableau(int* tab, int* size, int* nbElts, int element) {
 
 
 
-	
+
 
 
 
@@ -93,7 +93,7 @@ int main() {
 
 
 
-		// Déclaration des variables 
+	// Déclaration des variables 
 	int MyTab1[10];
 	int* MyTab2 = NULL;
 	int tabSize = TAB2SIZE;
@@ -103,7 +103,7 @@ int main() {
 	printf("Tab1 est :");
 	afficheTab(MyTab1, 10, 6);
 
-	
+
 	MyTab2 = (int*)malloc(sizeof(int) * tabSize);    // Allocation dynamique du tableau  
 	if (MyTab2 == NULL) {
 		printf("Memoire insuffisante");
@@ -125,12 +125,6 @@ int main() {
 	afficheTab(MyTab2, tabSize, nbElts);
 	free(MyTab2); // On n'a plus besoin de MyTab2 donc on libère l'espace en mémoire
 }
-
-	
-
-
-
-
 
 
 

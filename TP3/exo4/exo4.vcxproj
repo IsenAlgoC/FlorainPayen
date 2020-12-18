@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{46706d72-bde8-4794-9f79-0eda66394242}</ProjectGuid>
-    <RootNamespace>tp2</RootNamespace>
+    <ProjectGuid>{164f8f3f-7fc6-449a-8391-831e9bd00e1c}</ProjectGuid>
+    <RootNamespace>exo4</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>exo1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="boucle.c" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\flotp\tp-3-\ex4\Source.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

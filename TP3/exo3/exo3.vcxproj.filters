@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="boucle.c">
+    <ClCompile Include="..\..\..\..\..\..\Desktop\flotp\tp-3-\ex3\Source.c">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>

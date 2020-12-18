@@ -153,4 +153,4 @@ int DeleteLinkedListElem(LinkedList* list, SingleLinkedListElem* item) {
 
 		return(0);  // pas trouvé
 	}
-
+}
